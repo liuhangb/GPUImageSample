@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/activity_main"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    tools:context="com.example.gpuimagesample.MainActivity">
+
+<com.example.gpuimagesample.views.CameraSurfaceView
+    android:id="@+id/lsq_gl_surface_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/lsq_take_photo_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="拍照"/>
+
+    <Button
+        android:id="@+id/lsq_switch_camera_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="切换摄像头"/>
+
+    <Button
+        android:id="@+id/lsq_flash_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="闪关灯"/>
+
+</RelativeLayout>

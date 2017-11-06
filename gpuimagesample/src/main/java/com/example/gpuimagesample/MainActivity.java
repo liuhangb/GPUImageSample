@@ -1,9 +1,6 @@
 package com.example.gpuimagesample;
 
 import android.app.Activity;
-import android.graphics.SurfaceTexture;
-import android.opengl.GLES11Ext;
-import android.opengl.GLES20;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +10,8 @@ import com.example.gpuimagesample.camera.CameraManager;
 import com.example.gpuimagesample.utils.CameraUtils;
 import com.example.gpuimagesample.views.CameraSurfaceView;
 
+import jp.co.cyberagent.android.gpuimage.GPUImageGammaFilter;
+
 public class MainActivity extends Activity implements View.OnClickListener {
     private CameraSurfaceView mGLSurfaceView;
 
@@ -21,6 +20,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button mTakenPhotoBtn;
     private Button mSwitchCameraBtn;
     private Button mFlashBtn;
+    private Button addFilterBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -42,6 +42,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mFlashBtn.setOnClickListener(this);
         mSwitchCameraBtn.setOnClickListener(this);
         mTakenPhotoBtn.setOnClickListener(this);
+        addFilterBtn = findViewById(R.id.lsq_add_filter_btn);
+        addFilterBtn.setOnClickListener(this);
     }
 
     private CameraManager getCamera()
@@ -75,6 +77,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
      else if (view == mGLSurfaceView)
      {
         mCamera.autoFoucus();
+     }
+     else if (view == addFilterBtn)
+     {
+         GPUImageGammaFilter gammaFilter = new GPUImageGammaFilter();
+         gammaFilter.setGamma(3.0f);
+         mGLSurfaceView.setFilter(gammaFilter);
      }
     }
 }

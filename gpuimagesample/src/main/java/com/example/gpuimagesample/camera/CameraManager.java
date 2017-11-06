@@ -20,12 +20,8 @@ import com.example.gpuimagesample.bean.CameraSize;
 import com.example.gpuimagesample.utils.AlbumUtils;
 import com.example.gpuimagesample.utils.BitmapUtils;
 import com.example.gpuimagesample.utils.CameraUtils;
-import com.example.gpuimagesample.utils.LogUtils;
 
 import java.io.IOException;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
 
 /**
  * Created by LiuHang on 10/27/2017.

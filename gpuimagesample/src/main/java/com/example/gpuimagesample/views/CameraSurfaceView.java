@@ -3,14 +3,13 @@ package com.example.gpuimagesample.views;
 import android.content.Context;
 import android.graphics.PixelFormat;
 import android.graphics.SurfaceTexture;
-import android.opengl.GLES11Ext;
-import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.util.AttributeSet;
 
 import com.example.gpuimagesample.CameraRender;
-import com.example.gpuimagesample.DirectDrawer;
 import com.example.gpuimagesample.camera.CameraManager;
+
+import jp.co.cyberagent.android.gpuimage.GPUImageFilter;
 
 /**
  * Created by Administrator on 2017/10/27 0027.
@@ -55,4 +54,9 @@ public class CameraSurfaceView extends GLSurfaceView
             requestRender();
         }
     };
+
+    public void setFilter(GPUImageFilter filter)
+    {
+        mCameraRender.setFilter(filter);
+    }
 }

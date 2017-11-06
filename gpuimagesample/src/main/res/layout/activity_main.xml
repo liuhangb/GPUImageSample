@@ -30,4 +30,11 @@
         android:layout_alignParentRight="true"
         android:text="闪关灯"/>
 
+    <Button
+        android:id="@+id/lsq_add_filter_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="添加滤镜"/>
+
 </RelativeLayout>
